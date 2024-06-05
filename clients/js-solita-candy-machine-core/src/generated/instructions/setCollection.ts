@@ -69,7 +69,7 @@ export const setCollectionInstructionDiscriminator = [192, 254, 206, 76, 168, 18
  */
 export function createSetCollectionInstruction(
   accounts: SetCollectionInstructionAccounts,
-  programId = new web3.PublicKey('CndyV3LdqHUfDLmE5naZjVN8rBZz4tqhdefbAnjHG3JR'),
+  programId = new web3.PublicKey('M1YA9A1YxA8kUeqpuURd3RXTQzXu2ZbotA4dLLetFNQ'),
 ) {
   const [data] = setCollectionStruct.serialize({
     instructionDiscriminator: setCollectionInstructionDiscriminator,

@@ -93,7 +93,7 @@ export function route(
   // Program ID.
   const programId = context.programs.getPublicKey(
     'mplCandyGuard',
-    'Guard1JwRhJkVH6XZhzoYxeBVQe872VH6QggF4BWmS9g'
+    'M1YAQdqp2JyDxVreYxuhox7tkU84exrzW1AGuFu3Ek6'
   );
 
   // Accounts.

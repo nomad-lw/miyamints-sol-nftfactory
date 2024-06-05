@@ -9,6 +9,8 @@ use spl_associated_token_account::get_associated_token_address;
 
 use crate::errors::CandyGuardError;
 
+use mpl_candy_machine_core::constants::MIYA_INIT_AUTHORITY;
+
 // Empty value used for string padding.
 const NULL_STRING: &str = "\0";
 
@@ -88,6 +90,13 @@ pub fn assert_is_token_account(
     assert_keys_equal(&token_account.owner, wallet)?;
     assert_keys_equal(&token_account.mint, mint)?;
     Ok(token_account)
+}
+
+pub fn assert_is_init_authority(
+    authority_cand: &AccountInfo
+) -> core::result::Result<(), ProgramError> {
+    assert_keys_equal(&authority_cand.key, &MIYA_INIT_AUTHORITY)?;
+    Ok(())
 }
 
 pub fn assert_keys_equal(key1: &Pubkey, key2: &Pubkey) -> Result<()> {

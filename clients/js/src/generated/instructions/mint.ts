@@ -107,7 +107,7 @@ export function mint(
   // Program ID.
   const programId = context.programs.getPublicKey(
     'mplCandyGuard',
-    'Guard1JwRhJkVH6XZhzoYxeBVQe872VH6QggF4BWmS9g'
+    'M1YAQdqp2JyDxVreYxuhox7tkU84exrzW1AGuFu3Ek6'
   );
 
   // Accounts.
@@ -213,7 +213,7 @@ export function mint(
   if (!resolvedAccounts.candyMachineProgram.value) {
     resolvedAccounts.candyMachineProgram.value = context.programs.getPublicKey(
       'mplCandyMachine',
-      'CndyV3LdqHUfDLmE5naZjVN8rBZz4tqhdefbAnjHG3JR'
+      'M1YA9A1YxA8kUeqpuURd3RXTQzXu2ZbotA4dLLetFNQ'
     );
     resolvedAccounts.candyMachineProgram.isWritable = false;
   }

@@ -5,7 +5,7 @@ use crate::{
     approve_collection_authority_helper,
     constants::{AUTHORITY_SEED, HIDDEN_SECTION},
     state::{CandyMachine, CandyMachineData},
-    utils::fixed_length_string,
+    utils::{fixed_length_string, assert_is_init_authority},
     AccountVersion, ApproveCollectionAuthorityHelperAccounts,
 };
 
@@ -13,6 +13,8 @@ pub fn initialize(ctx: Context<Initialize>, data: CandyMachineData) -> Result<()
     msg!("(Deprecated as of 1.0.0) Use InitializeV2 instead");
 
     let candy_machine_account = &mut ctx.accounts.candy_machine;
+
+    assert_is_init_authority(&ctx.accounts.authority)?;
 
     let mut candy_machine = CandyMachine {
         data,

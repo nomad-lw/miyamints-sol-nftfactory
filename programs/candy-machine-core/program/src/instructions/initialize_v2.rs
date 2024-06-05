@@ -8,7 +8,7 @@ use crate::{
         AUTHORITY_SEED, HIDDEN_SECTION, MPL_TOKEN_AUTH_RULES_PROGRAM, RULE_SET_LENGTH, SET,
     },
     state::{CandyMachine, CandyMachineData},
-    utils::fixed_length_string,
+    utils::{fixed_length_string, assert_is_init_authority},
     AccountVersion, ApproveMetadataDelegateHelperAccounts,
 };
 
@@ -36,6 +36,8 @@ pub fn initialize_v2(
     }
 
     let candy_machine_account = &mut ctx.accounts.candy_machine;
+
+    assert_is_init_authority(&ctx.accounts.authority)?;
 
     let mut candy_machine = CandyMachine {
         data,

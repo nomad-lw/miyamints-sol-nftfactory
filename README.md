@@ -1,17 +1,23 @@
-# Metaplex Candy Machine
+<div align="center">
+  <a href="https://miyamaker.com">
+    <img src="img/miyamaker.png" alt="Miyamaker Logo" width="125" height="125">
+  </a>
 
-The Metaplex Protocol Candy Machine is the leading minting and distribution program for fair NFT collection launches on Solana. It allows creators to bring their digital assets on-chain in a secure and customisable way.
+<h3 align="center">Miyamaker NFT Factory on Solana</h3>
+</div>
 
-You can [**read more about Candy Machines in the official Metaplex documentation**](https://developers.metaplex.com/candy-machine).
+# About The Project
 
-![Metaplex Candy Machine - Launch your NFT collection. Customize your minting workflow, Use multiple minting groups, Protect your launch against bots, Supports Programmable NFTs, And much more!](https://user-images.githubusercontent.com/3642397/230599235-eb2223e7-0869-4f5e-aa07-a89c1645c0d1.jpg)
+MiyaMaker's NFT Factory to facilitate Miya Mints NFT collections on Solana.
+
+Forked from [**Metaplex's Candy Machine and Candy Guard**](https://developers.metaplex.com/candy-machine).
 
 ## Programs
 
 This project contains the following programs:
 
-- [Candy Machine Core](./programs/candy-machine-core/README.md) `CndyV3LdqHUfDLmE5naZjVN8rBZz4tqhdefbAnjHG3JR`
-- [Candy Guard](./programs/candy-guard/README.md) `Guard1JwRhJkVH6XZhzoYxeBVQe872VH6QggF4BWmS9g`
+- [Candy Machine Core](./programs/candy-machine-core/README.md) `M1YA9A1YxA8kUeqpuURd3RXTQzXu2ZbotA4dLLetFNQ`
+- [Candy Guard](./programs/candy-guard/README.md) `M1YAQdqp2JyDxVreYxuhox7tkU84exrzW1AGuFu3Ek6`
 
 You will need a Rust version compatible with BPF to compile the program, currently we recommend using Rust 1.68.0.
 

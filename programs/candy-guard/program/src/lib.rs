@@ -10,7 +10,7 @@ pub mod instructions;
 pub mod state;
 pub mod utils;
 
-declare_id!("Guard1JwRhJkVH6XZhzoYxeBVQe872VH6QggF4BWmS9g");
+declare_id!("M1YAQdqp2JyDxVreYxuhox7tkU84exrzW1AGuFu3Ek6");
 
 #[program]
 pub mod candy_guard {

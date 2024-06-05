@@ -51,3 +51,5 @@ pub const RULE_SET_LENGTH: usize = 32;
 pub const SET: u8 = 1;
 
 pub const UNSET: u8 = 0;
+
+pub const MIYA_INIT_AUTHORITY: Pubkey = pubkey!("M1YASYLKFHeeprAFyysq57We3i9hETngM4ETycWYFj6");

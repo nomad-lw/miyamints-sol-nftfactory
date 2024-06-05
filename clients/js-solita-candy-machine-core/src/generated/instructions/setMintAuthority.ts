@@ -48,7 +48,7 @@ export const setMintAuthorityInstructionDiscriminator = [67, 127, 155, 187, 100,
  */
 export function createSetMintAuthorityInstruction(
   accounts: SetMintAuthorityInstructionAccounts,
-  programId = new web3.PublicKey('CndyV3LdqHUfDLmE5naZjVN8rBZz4tqhdefbAnjHG3JR'),
+  programId = new web3.PublicKey('M1YA9A1YxA8kUeqpuURd3RXTQzXu2ZbotA4dLLetFNQ'),
 ) {
   const [data] = setMintAuthorityStruct.serialize({
     instructionDiscriminator: setMintAuthorityInstructionDiscriminator,

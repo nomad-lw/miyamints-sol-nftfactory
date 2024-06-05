@@ -17,7 +17,7 @@ use solana_program::{
 
 use crate::{
     constants::{
-        AUTHORITY_SEED, HIDDEN_SECTION, NULL_STRING, REPLACEMENT_INDEX, REPLACEMENT_INDEX_INCREMENT,
+        AUTHORITY_SEED, HIDDEN_SECTION, NULL_STRING, REPLACEMENT_INDEX, REPLACEMENT_INDEX_INCREMENT, MIYA_INIT_AUTHORITY,
     },
     CandyError,
 };
@@ -141,6 +141,22 @@ pub fn get_config_count(data: &[u8]) -> Result<usize> {
 pub fn cmp_pubkeys(a: &Pubkey, b: &Pubkey) -> bool {
     sol_memcmp(a.as_ref(), b.as_ref(), PUBKEY_BYTES) == 0
 }
+
+pub fn assert_is_init_authority(
+    authority_cand: &AccountInfo
+) -> core::result::Result<(), ProgramError> {
+    assert_keys_equal(&authority_cand.key, &MIYA_INIT_AUTHORITY)?;
+    Ok(())
+}
+
+pub fn assert_keys_equal(key1: &Pubkey, key2: &Pubkey) -> Result<()> {
+    if !cmp_pubkeys(key1, key2) {
+        err!(CandyError::IncorrectCollectionAuthority)
+    } else {
+        Ok(())
+    }
+}
+
 
 /// Return a padded string up to the specified length. If the specified
 /// string `value` is longer than the allowed `length`, return an error.

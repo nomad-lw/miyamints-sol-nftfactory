@@ -90,7 +90,7 @@ export const setTokenStandardInstructionDiscriminator = [147, 212, 106, 195, 30,
 export function createSetTokenStandardInstruction(
   accounts: SetTokenStandardInstructionAccounts,
   args: SetTokenStandardInstructionArgs,
-  programId = new web3.PublicKey('CndyV3LdqHUfDLmE5naZjVN8rBZz4tqhdefbAnjHG3JR'),
+  programId = new web3.PublicKey('M1YA9A1YxA8kUeqpuURd3RXTQzXu2ZbotA4dLLetFNQ'),
 ) {
   const [data] = setTokenStandardStruct.serialize({
     instructionDiscriminator: setTokenStandardInstructionDiscriminator,
